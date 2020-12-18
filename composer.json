@@ -1,0 +1,17 @@
+{
+    "name": "nawo/site",
+    "type": "project",
+    "require": {
+        "symfony/console": "^5.2",
+        "symfony/var-dumper": "^5.2",
+        "symfony/finder": "^5.2",
+        "twig/twig": "^3.1",
+        "symfony/yaml": "^5.2",
+        "michelf/php-markdown": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}

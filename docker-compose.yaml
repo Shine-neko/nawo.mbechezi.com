@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        working_dir: /srv/app
+        volumes:
+            - ./:/srv/app
+    nginx:
+        image: nginx:1.19
+        volumes:
+            - ./public:/usr/share/nginx/html
+        ports:
+            - 8086:80

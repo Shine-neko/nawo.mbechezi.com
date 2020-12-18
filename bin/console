@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\Command\PressCommand;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
+
+$loader = new FilesystemLoader(__DIR__. '/../templates/');
+$twig = new Environment($loader, [
+    'cache' => __DIR__. '/../var/cache/twig',
+    'debug' => true
+]);
+
+$application = new Application();
+$application->add(new PressCommand($twig));
+
+$application->run();

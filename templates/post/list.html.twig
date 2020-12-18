@@ -1,0 +1,31 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1 class="posttitle">{{ title }}</h1>
+
+    <div class="blog-grid-container">
+        {% for post in posts %}
+        <div class="blog-grid-item">
+            <div class="card h-100">
+                <div class="maxthumb">
+
+                </div>
+                <div class="card-body">
+                    <h5>
+                        <a class="text-dark" href="{{ post.permalink }}">{{ post.title }}</a>
+                    </h5>
+                    <p>
+
+                    </p>
+                </div>
+                <div class="card-footer bg-white">
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock content %}
