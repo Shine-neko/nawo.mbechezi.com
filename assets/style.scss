@@ -1,0 +1,33 @@
+@import "http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin";
+
+body {
+  font-family: Ubuntu, arial, serif;
+  background-color: #1d1e20;
+  color: white;
+}
+
+
+header {
+  display: flex;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 1024px;
+  justify-content: space-between;
+
+  nav ul {
+    list-style: none;
+    flex-direction: row;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-left: 5px;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

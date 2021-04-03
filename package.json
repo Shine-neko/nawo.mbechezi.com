@@ -1,0 +1,11 @@
+{
+  "name": "nawo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Shine-neko/nawo.mbechezi.com.git",
+  "author": "Nawo Mbechezi <mlanawo.mbechezi@kemeter.io>",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}

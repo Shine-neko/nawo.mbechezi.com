@@ -9,13 +9,13 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Finder\Finder;
 use Twig\Environment;
-use Symfony\Component\Yaml\Yaml;
 
 class PressCommand extends Command
 {
     protected static $defaultName = 'app:site:press';
     private Environment $twig;
     private Parser $parser;
+    const ROOT_DIR = __DIR__ . '/../..';
 
     public function __construct(Environment $twig)
     {
@@ -35,7 +35,7 @@ class PressCommand extends Command
 
     private function createPages(): void
     {
-        foreach (Finder::create()->in(__DIR__ . '/../../data/_pages') as $page) {
+        foreach (Finder::create()->in(self::ROOT_DIR . '/data/_pages') as $page) {
             $data = $this->parser->parse($page->getContents());
 
             if (isset($data['layout'])) {
@@ -46,18 +46,18 @@ class PressCommand extends Command
             $template = $data['template'] ?? 'page.html.twig';
             $html = $this->twig->render($template, $data);
 
-            file_put_contents(__DIR__ . '/../../public/' . $data['permalink'], $html);
+            file_put_contents(self::ROOT_DIR . '/public/' . $data['permalink'], $html);
         }
     }
 
     private function createPosts(): void
     {
-        foreach (Finder::create()->in(__DIR__ . '/../../data/_posts') as $file) {
+        foreach (Finder::create()->in(self::ROOT_DIR . '/data/_posts') as $file) {
             $data = $this->parser->parse($file->getContents());
 
             $html = $this->twig->render('post/post.html.twig', $data);
             $filename = str_replace('md', 'html', $file->getFilename());
-            $folder = __DIR__ . '/../../public/posts/';
+            $folder = self::ROOT_DIR . '/public/posts/';
 
             if (!@mkdir($folder) && !is_dir($folder)) {
                 throw new \RuntimeException(sprintf('Directory "%s" was not created', $folder));
@@ -70,7 +70,7 @@ class PressCommand extends Command
     private function fetchPosts(?string $category): array
     {
         $posts = [];
-        foreach (Finder::create()->in(__DIR__ . '/../../data/_posts') as $file) {
+        foreach (Finder::create()->in(self::ROOT_DIR . '/data/_posts') as $file) {
             $data = $this->parser->parse($file->getContents());
             $filename = str_replace('md', 'html', $file->getFilename());
 
