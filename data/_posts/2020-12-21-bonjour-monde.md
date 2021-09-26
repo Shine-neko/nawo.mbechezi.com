@@ -2,8 +2,7 @@
 layout: post
 title: Bonjour monde
 ---
+Cela fait des années que je songe à mettre par écrit plusieurs de mes pensées
+C'est désormais chose faite. Je vais pouvoir parler mes passions du dimanche: du bricolage, de la tech, des voyages et de la cuisine. 
 
-Depuis le temps que je dis qu'il faudrait que je le fasse et bah voici.
-De quoi va parler ce blog ?  De toutes mes passions du dimanche: du bricolage, de la tech, des voyages et de la cuisine. 
-
-Voilou voilà. [https://www.youtube.com/channel/UCQDgz8t9w30xjS_GrxQAs_w](Abonnez vous)
+Voilà bon bah  ... [Abonnez vous](https://www.youtube.com/channel/UCQDgz8t9w30xjS_GrxQAs_w) ? 

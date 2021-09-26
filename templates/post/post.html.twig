@@ -1,15 +1,17 @@
 {% extends "layout.html.twig" %}
 
+{% block bodyClass %}post show{% endblock %}
 {% block content %}
-    <div class="site-content ">
-        <div class="main-content">
-            <div class="entry-header">
-                <h1 class="posttitle">{{ title }}</h1>
-            </div>
-
-            <div class="article-post">
-                {{ content | raw }}
-            </div>
+    <header class="main-content">
+        <h1>{{ title }}</h1>
+        <div class="post-meta">
+            <span class="post-date">
+                {{ created_at|date }}
+            </span>
         </div>
-    </div>
+
+        <div class="article-post">
+            {{ content | raw }}
+        </div>
+    </header>
 {% endblock content %}

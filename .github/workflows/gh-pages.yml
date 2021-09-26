@@ -25,7 +25,7 @@ jobs:
 
       - name: "Build html"
         run: |
-          php bin/console app:site:press
+          php bin/console site:build
 
       - name: "Deploy Github Pages"
         uses: JamesIves/github-pages-deploy-action@3.7.1

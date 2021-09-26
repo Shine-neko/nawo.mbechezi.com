@@ -6,12 +6,15 @@ body {
   color: white;
 }
 
-
-header {
-  display: flex;
+@mixin container {
   margin-inline-start: auto;
   margin-inline-end: auto;
   width: 1024px;
+}
+
+body > header {
+  display: flex;
+  @include container;
   justify-content: space-between;
 
   nav ul {
@@ -22,7 +25,7 @@ header {
     margin-bottom: 0;
 
     li {
-      margin-left: 5px;
+      margin-left: 20px;
     }
   }
 
@@ -30,4 +33,40 @@ header {
     color: white;
     text-decoration: none;
   }
+}
+
+main {
+  @include container;
+  margin-top: 50px;
+}
+
+
+.blog-item {
+  background-color: #2e2e33;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+
+  h4 {
+    font-size: 24px;
+    margin: 0;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.post-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.56)
+}
+
+.post.show {
+  h1 {
+    margin-bottom: 5px;
+  }
+}
+.article-post {
+  margin-top: 50px;
 }
