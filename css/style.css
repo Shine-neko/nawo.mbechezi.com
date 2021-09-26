@@ -1,0 +1,65 @@
+@import "http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin";
+body {
+  font-family: Ubuntu, arial, serif;
+  background-color: #1d1e20;
+  color: white;
+}
+
+body > header {
+  display: flex;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 1024px;
+  justify-content: space-between;
+}
+body > header nav ul {
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body > header nav ul li {
+  margin-left: 20px;
+}
+body > header a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 1024px;
+  margin-top: 50px;
+}
+
+.blog-item {
+  background-color: #2e2e33;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+.blog-item h4 {
+  font-size: 24px;
+  margin: 0;
+}
+.blog-item h4 a {
+  color: white;
+  text-decoration: none;
+}
+
+.post-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.post.show h1 {
+  margin-bottom: 5px;
+}
+
+.article-post {
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
