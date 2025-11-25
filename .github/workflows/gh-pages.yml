@@ -10,26 +10,23 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
+        uses: actions/checkout@v4
+
       - name: "Set up PHP"
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0'
+          php-version: '8.3'
           tools: composer:v2
 
       - name: "Install dependencies"
-        run: |
-          composer install
+        run: composer install --no-dev --optimize-autoloader
 
-      - name: "Build html"
-        run: |
-          php bin/console site:build
+      - name: "Build site"
+        run: php bin/console site:build
 
-      - name: "Deploy Github Pages"
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: "Deploy to GitHub Pages"
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: public/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages

@@ -3,27 +3,14 @@
 {% block content %}
     <h1>{{ title }}</h1>
 
-    <div class="blog-grid-container">
+    <div class="posts-list">
         {% for post in posts %}
         <article class="blog-item">
-            <div class="card h-100">
-                <div class="maxthumb">
-
-                </div>
-                <div class="card-body">
-                    <h4>
-                        <a class="text-dark" href="{{ post.permalink }}">{{ post.title }}</a>
-                    </h4>
-                    <span class="post-date">{{ post.date|date }}</span>
-                    <p></p>
-                </div>
-                <footer>
-                </footer>
-            </div>
-
+            <h2>
+                <a href="{{ post.permalink }}">{{ post.title }}</a>
+            </h2>
+            <span class="post-date">{{ post.created_at|date("F j, Y") }}</span>
         </article>
         {% endfor %}
     </div>
-
-
 {% endblock content %}

@@ -18,5 +18,7 @@ class Parser
                 'content' => Markdown::defaultTransform($content),
             ]+$parameters;
         }
+
+        return [];
     }
 }

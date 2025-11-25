@@ -1,0 +1,29 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <div class="resume-container">
+        <div class="resume-column">
+            <h2>Curriculum vitæ</h2>
+            <div class="cv-content">
+                {{ content | raw }}
+            </div>
+        </div>
+
+        <div class="resume-column">
+            <h2>Bio</h2>
+            <div class="bio-content">
+                <p>If you need a short biography, you can use this one:</p>
+                <div class="bio-text">
+                    <p>Mlanawo Mbechezi is a VCto & Architect who helps companies define their product vision, design robust architectures, and implement sustainable technical strategies.</p>
+
+                    <p>He aligns product, technology, and business value while providing operational expertise on infrastructure choices, workflows, and tech team organization.</p>
+
+                    <p>He has been working on various projects including Lugha (a next-generation language learning SaaS) and Kemeter (a complete PaaS built brick by brick).</p>
+                </div>
+                <button class="copy-button">Copy</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

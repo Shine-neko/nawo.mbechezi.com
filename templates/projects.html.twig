@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="projects-intro">
+        <h1>{{ title }}</h1>
+        <p>Here is a small presentation of some of the projects I was or I am still part of. If you have any question or remarks on those projects, please <a href="mailto:your.email@example.com" class="contact-link">contact me !</a></p>
+    </div>
+
+    <div class="projects-list">
+        {{ content | raw }}
+    </div>
+{% endblock content %}
