@@ -147,7 +147,7 @@ class BuildCommand extends Command
             $data = $this->parser->parse($file->getContents());
             $filename = str_replace('md', 'html', $file->getFilename());
 
-            if (null !== $category && $data['layout'] !== $category) {
+            if (null !== $category && ($data['layout'] ?? null) !== $category) {
                 continue;
             }
 

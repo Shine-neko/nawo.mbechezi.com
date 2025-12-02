@@ -1,8 +1,9 @@
 ---
 title: Projects
 permalink: projects.html
-template: projects.html.twig
 ---
+
+<p>Here is a small presentation of some of the projects I was or I am still part of. If you have any question or remarks on those projects, please <a href="mailto:nawo@alpacode.io" class="contact-link">contact me !</a></p>
 
 <div class="project-card">
     <h2>Lugha</h2>
@@ -19,11 +20,11 @@ template: projects.html.twig
 
 <div class="project-card">
     <h2>Ring</h2>
-    <p>A modern Rust-based systems programming project focused on building robust and performant applications.</p>
+    <p>A lightweight container orchestration platform designed as a simpler alternative to Kubernetes. Ring enables declarative deployment and management of containerized applications with automatic health monitoring, namespace isolation, and persistent storage support.</p>
     <div class="project-tags">
         <span class="tag">Rust</span>
-        <span class="tag">Systems Programming</span>
-        <span class="tag">Performance</span>
+        <span class="tag">Container Orchestration</span>
+        <span class="tag">Docker</span>
     </div>
     <div class="project-footer">
         <a href="https://github.com/kemeter/ring" target="_blank">View on GitHub</a>
@@ -32,11 +33,11 @@ template: projects.html.twig
 
 <div class="project-card">
     <h2>Sozune</h2>
-    <p>A Rust project under MIT license, emphasizing clean architecture and modern development practices.</p>
+    <p>A modern reverse proxy and load balancer that automatically discovers and routes traffic to containerized services. It monitors Docker events in real-time and configures itself dynamically without manual intervention, supporting HTTP/HTTPS, TCP, and UDP protocols.</p>
     <div class="project-tags">
         <span class="tag">Rust</span>
-        <span class="tag">Open Source</span>
-        <span class="tag">MIT License</span>
+        <span class="tag">Reverse Proxy</span>
+        <span class="tag">Load Balancer</span>
     </div>
     <div class="project-footer">
         <a href="https://github.com/kemeter/sozune" target="_blank">View on GitHub</a>
