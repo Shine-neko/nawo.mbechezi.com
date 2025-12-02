@@ -43,3 +43,16 @@ permalink: projects.html
         <a href="https://github.com/kemeter/sozune" target="_blank">View on GitHub</a>
     </div>
 </div>
+
+<div class="project-card">
+    <h2>Aplos</h2>
+    <p>A file-based routing framework for React applications that automatically generates routes from the directory structure. It streamlines web development by eliminating manual route configuration, with support for dynamic routes, nested layouts, and runtime configuration.</p>
+    <div class="project-tags">
+        <span class="tag">React</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Routing Framework</span>
+    </div>
+    <div class="project-footer">
+        <a href="https://github.com/alpac0de/aplos" target="_blank">View on GitHub</a>
+    </div>
+</div>
