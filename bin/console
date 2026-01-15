@@ -15,6 +15,6 @@ $twig = new Environment($loader, [
 ]);
 
 $application = new Application();
-$application->add(new BuildCommand($twig));
+$application->addCommand(new BuildCommand($twig));
 
 $application->run();
