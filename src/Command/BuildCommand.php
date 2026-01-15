@@ -52,6 +52,7 @@ class BuildCommand extends Command
         $output->writeln('<comment>Building site...</comment>');
         $this->createPages();
         $this->createPosts();
+        $this->createFragments();
         $output->writeln('<info>Build complete!</info>');
     }
 
@@ -77,6 +78,7 @@ class BuildCommand extends Command
         $directories = [
             self::ROOT_DIR . '/data/_pages',
             self::ROOT_DIR . '/data/_posts',
+            self::ROOT_DIR . '/data/_fragments',
             self::ROOT_DIR . '/templates',
             self::ROOT_DIR . '/assets',
         ];
@@ -136,26 +138,64 @@ class BuildCommand extends Command
         }
     }
 
-    private function fetchPosts(?string $category): array
+    private function createFragments(): void
     {
-        $posts = [];
-        /** @var SplFileInfo $file */
-        foreach (Finder::create()->in(self::ROOT_DIR . '/data/_posts') as $file) {
+        $fragmentsDir = self::ROOT_DIR . '/data/_fragments';
+
+        if (!is_dir($fragmentsDir)) {
+            return;
+        }
+
+        foreach (Finder::create()->in($fragmentsDir) as $file) {
+            $data = $this->parser->parse($file->getContents());
             $regex = "/[0-9]{4}-[0-9]{2}-[0-9]{2}/";
             preg_match($regex, $file->getRelativePathname(), $matches);
 
-            $data = $this->parser->parse($file->getContents());
-            $filename = str_replace('md', 'html', $file->getFilename());
+            $data['created_at'] = new \DateTime($matches[0]);
 
-            if (null !== $category && ($data['layout'] ?? null) !== $category) {
+            $html = $this->twig->render('post/post.html.twig', $data);
+            $filename = str_replace('md', 'html', $file->getFilename());
+            $folder = self::ROOT_DIR . '/public/fragments/';
+
+            if (!@mkdir($folder) && !is_dir($folder)) {
+                throw new \RuntimeException(sprintf('Directory "%s" was not created', $folder));
+            }
+
+            file_put_contents($folder . $filename, $html);
+        }
+    }
+
+    private function fetchPosts(?string $category): array
+    {
+        $posts = [];
+        $directories = [
+            self::ROOT_DIR . '/data/_posts' => '/posts/',
+            self::ROOT_DIR . '/data/_fragments' => '/fragments/',
+        ];
+
+        foreach ($directories as $directory => $urlPrefix) {
+            if (!is_dir($directory)) {
                 continue;
             }
 
-            $posts[] = [
-                'title' => $data['title'],
-                'created_at' => new \DateTime($matches[0]),
-                'permalink' => '/posts/'.$filename
-            ];
+            /** @var SplFileInfo $file */
+            foreach (Finder::create()->in($directory) as $file) {
+                $regex = "/[0-9]{4}-[0-9]{2}-[0-9]{2}/";
+                preg_match($regex, $file->getRelativePathname(), $matches);
+
+                $data = $this->parser->parse($file->getContents());
+                $filename = str_replace('md', 'html', $file->getFilename());
+
+                if (null !== $category && ($data['layout'] ?? null) !== $category) {
+                    continue;
+                }
+
+                $posts[] = [
+                    'title' => $data['title'],
+                    'created_at' => new \DateTime($matches[0]),
+                    'permalink' => $urlPrefix.$filename
+                ];
+            }
         }
 
         return $posts;
