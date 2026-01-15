@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Command;
@@ -193,7 +194,7 @@ class BuildCommand extends Command
                 $posts[] = [
                     'title' => $data['title'],
                     'created_at' => new \DateTime($matches[0]),
-                    'permalink' => $urlPrefix.$filename
+                    'permalink' => $urlPrefix . $filename,
                 ];
             }
         }

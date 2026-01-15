@@ -3,8 +3,8 @@ title: Resume
 permalink: resume.html
 ---
 
-<div class="resume-container">
-<div class="resume-column">
+<div class="resume-container" markdown="1">
+<div class="resume-column" markdown="1">
 
 ## Curriculum vitæ
 
@@ -33,13 +33,13 @@ J'intègre l'IA au cœur de mes workflows techniques, notamment via la mise en p
 **[View my LinkedIn Profile →](https://www.linkedin.com/in/mlanawo-mbechezi-53b5ab44/)**
 
 </div>
-<div class="resume-column">
+<div class="resume-column" markdown="1">
 
 ## Bio
 
 If you need a short biography, you can use this one:
 
-<div class="bio-text">
+<div class="bio-text" markdown="1">
 
 Mlanawo Mbechezi is a VCto & Architect who helps companies define their product vision, design robust architectures, and implement sustainable technical strategies.
 

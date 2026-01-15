@@ -1,10 +1,11 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace App;
 
 use Symfony\Component\Yaml\Yaml;
-use Michelf\Markdown;
+use Michelf\MarkdownExtra;
 
 class Parser
 {
@@ -14,9 +15,13 @@ class Parser
             $parameters = $matches[1];
             $content = $matches[2];
             $parameters = Yaml::parse($parameters);
+
+            $parser = new MarkdownExtra();
+            $parser->hard_wrap = true;
+
             return [
-                'content' => Markdown::defaultTransform($content),
-            ]+$parameters;
+                'content' => $parser->transform($content),
+            ] + $parameters;
         }
 
         return [];
