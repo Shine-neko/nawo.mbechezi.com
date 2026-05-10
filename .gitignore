@@ -1,6 +1,9 @@
 public/*.html
 public/posts
 public/talks
+public/fragments
+public/fr
+public/feed.xml
 var/cache/*
 vendor
 node_modules
