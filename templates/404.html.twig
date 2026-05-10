@@ -1,0 +1,24 @@
+{% extends "layout.html.twig" %}
+
+{% block bodyClass %}error-404{% endblock %}
+
+{% block content %}
+    <div class="error-page">
+        <div class="error-code">404</div>
+        {% if lang == 'fr' %}
+            <h1>Cette page n'existe pas (encore).</h1>
+            <p>Le lien est cassé, la page a bougé, ou elle n'a jamais existé. Dans tous les cas — désolé.</p>
+            <div class="hero-cta" style="justify-content: center;">
+                <a class="btn btn-primary" href="{{ prefix }}/">Retour à l'accueil</a>
+                <a class="btn btn-ghost" href="{{ prefix }}/blog.html">Lire le blog →</a>
+            </div>
+        {% else %}
+            <h1>This page doesn't exist (yet).</h1>
+            <p>The link is broken, the page moved, or it never existed. Either way — sorry about that.</p>
+            <div class="hero-cta" style="justify-content: center;">
+                <a class="btn btn-primary" href="{{ prefix }}/">Back home</a>
+                <a class="btn btn-ghost" href="{{ prefix }}/blog.html">Read the blog →</a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}
