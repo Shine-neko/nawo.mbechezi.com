@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <g transform="translate(80,140)">
+    <rect width="160" height="32" rx="16" fill="rgba(91,140,255,0.12)" stroke="rgba(91,140,255,0.35)"/>
+    <text x="80" y="21" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="500" fill="#5b8cff" letter-spacing="2">VCTO · ARCHITECT</text>
+  </g>
+  <text x="80" y="320" font-family="Georgia, serif" font-size="120" font-weight="600" fill="#f4f3f0" letter-spacing="-5">Hi, I'm <tspan font-style="italic" fill="#a8a8b0">Nawo</tspan><tspan fill="#5b8cff">.</tspan></text>
+  <text x="80" y="400" font-family="Georgia, serif" font-size="32" font-weight="400" fill="#a8a8b0">Building Lugha &amp; Kemeter — turning</text>
+  <text x="80" y="445" font-family="Georgia, serif" font-size="32" font-weight="400" fill="#a8a8b0">product vision into robust systems.</text>
+  <text x="80" y="555" font-family="ui-monospace, monospace" font-size="18" fill="#6b6b75">nawo.mbechezi.com</text>
+</svg>

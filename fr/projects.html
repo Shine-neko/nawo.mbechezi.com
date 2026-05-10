@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Talks — Nawo</title>
-    <meta name="description" content="Conferences, meetups and talks — past and upcoming.">
+    <title>Projets — Nawo</title>
+    <meta name="description" content="Une sélection de projets que j&#039;ai construits ou auxquels je contribue — Lugha, Ring, Sozune, Aplos, et d&#039;autres.">
     <meta name="author" content="Nawo">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Nawo">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Talks">
-    <meta property="og:description" content="Conferences, meetups and talks — past and upcoming.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Projets">
+    <meta property="og:description" content="Une sélection de projets que j&#039;ai construits ou auxquels je contribue — Lugha, Ring, Sozune, Aplos, et d&#039;autres.">
     <meta property="og:url" content="https://nawo.mbechezi.com/">
     <meta property="og:image" content="https://nawo.mbechezi.com/images/og-default.svg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Talks">
-    <meta name="twitter:description" content="Conferences, meetups and talks — past and upcoming.">
+    <meta name="twitter:title" content="Projets">
+    <meta name="twitter:description" content="Une sélection de projets que j&#039;ai construits ou auxquels je contribue — Lugha, Ring, Sozune, Aplos, et d&#039;autres.">
 
-        <link rel="alternate" hreflang="fr" href="https://nawo.mbechezi.com/fr/talks.html">
+        <link rel="alternate" hreflang="en" href="https://nawo.mbechezi.com/projects.html">
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="alternate icon" href="/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Nawo — Blog" href="/feed.xml">
@@ -30,14 +30,14 @@
 <body class="">
     <header>
         <div class="header-container">
-            <a class="logo" href="/" aria-label="Home">nawo</a>
+            <a class="logo" href="/fr/" aria-label="Accueil">nawo</a>
             <nav>
                 <ul>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/resume.html">Resume</a></li>
-                    <li><a href="/projects.html">Projects</a></li>
-                    <li><a href="/talks.html">Talks</a></li>
-                    <li><a href="/fragments.html">Fragments</a></li>
+                    <li><a href="/fr/blog.html">Blog</a></li>
+                    <li><a href="/fr/resume.html">CV</a></li>
+                    <li><a href="/fr/projects.html">Projets</a></li>
+                    <li><a href="/fr/talks.html">Conférences</a></li>
+                    <li><a href="/fr/fragments.html">Fragments</a></li>
                 </ul>
             </nav>
             <ul class="social-icons">
@@ -69,11 +69,64 @@
     </header>
 
     <main>
-            <h1>Talks</h1>
-            <p class="page-intro">Conferences, meetups and talks — past and upcoming.</p>
+            <h1>Projets</h1>
+            <p class="page-intro">Une petite sélection de projets que je porte ou auxquels je contribue. Une question, une remarque ? <a href="mailto:nawo@alpacode.io" class="contact-link">Écris-moi</a>.</p>
     
-            <p class="posts-empty">No posts yet. Come back soon.</p>
-        </main>
+    <div class="content">
+        <div class="project-card">
+    <h2>Lugha</h2>
+    <p>Une plateforme d'apprentissage des langues moderne — exercices interactifs, pratique intelligente, et progression sur la durée.</p>
+    <div class="project-tags">
+        <span class="tag">Apprentissage des langues</span>
+        <span class="tag">Web App</span>
+        <span class="tag">Éducation</span>
+    </div>
+    <div class="project-footer">
+        <a href="https://lugha.app" target="_blank">Visiter Lugha</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <h2>Ring</h2>
+    <p>Une plateforme légère d'orchestration de conteneurs, pensée comme une alternative simple à Kubernetes. Déploiement déclaratif, monitoring de santé automatique, isolation par namespaces, stockage persistant.</p>
+    <div class="project-tags">
+        <span class="tag">Rust</span>
+        <span class="tag">Orchestration</span>
+        <span class="tag">Docker</span>
+    </div>
+    <div class="project-footer">
+        <a href="https://github.com/kemeter/ring" target="_blank">Voir sur GitHub</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <h2>Sozune</h2>
+    <p>Un reverse-proxy moderne et load-balancer qui détecte et route automatiquement le trafic vers les services conteneurisés. Il observe les événements Docker en temps réel et se configure tout seul, sans intervention manuelle. Supporte HTTP/HTTPS, TCP, UDP.</p>
+    <div class="project-tags">
+        <span class="tag">Rust</span>
+        <span class="tag">Reverse Proxy</span>
+        <span class="tag">Load Balancer</span>
+    </div>
+    <div class="project-footer">
+        <a href="https://github.com/kemeter/sozune" target="_blank">Voir sur GitHub</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <h2>Aplos</h2>
+    <p>Un framework de routing file-based pour React qui génère automatiquement les routes depuis la structure des dossiers. Plus besoin de configurer manuellement le routing : routes dynamiques, layouts imbriqués, configuration à l'exécution.</p>
+    <div class="project-tags">
+        <span class="tag">React</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Framework de routing</span>
+    </div>
+    <div class="project-footer">
+        <a href="https://github.com/alpac0de/aplos" target="_blank">Voir sur GitHub</a>
+    </div>
+</div>
+
+    </div>
+    </main>
 
     <footer>
         <div class="footer-container">
@@ -81,7 +134,7 @@
             <p>
                 <a href="/feed.xml">RSS</a>
                 · <a href="mailto:nawo@alpacode.io">nawo@alpacode.io</a>
-                · <a href="/fr/talks.html" hreflang="fr" lang="fr">Français</a>            </p>
+                · <a href="/projects.html" hreflang="en" lang="en">English</a>            </p>
         </div>
     </footer>
 </body>
