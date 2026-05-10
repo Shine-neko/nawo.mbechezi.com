@@ -11,7 +11,8 @@ use Twig\Environment;
 $loader = new FilesystemLoader(__DIR__. '/../templates/');
 $twig = new Environment($loader, [
     'cache' => __DIR__. '/../var/cache/twig',
-    'debug' => true
+    'debug' => true,
+    'auto_reload' => true,
 ]);
 
 $application = new Application();
