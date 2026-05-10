@@ -1,34 +1,37 @@
 ---
 title: Resume
 permalink: resume.html
+body_class: resume
+intro: VCto & Architect — building product vision, sustainable architectures, and engineering teams.
+description: VCto & Architect — building product vision, sustainable architectures, and engineering teams.
 ---
 
 <div class="resume-container" markdown="1">
 <div class="resume-column" markdown="1">
 
-## Curriculum vitæ
+## Curriculum
 
-Je suis **VCto & Architect** : j'accompagne les entreprises dans la définition de leur vision produit, la conception d'architectures robustes et la mise en place de stratégies techniques durables.
-Mon rôle consiste à aligner le produit, la technique et la valeur business, tout en apportant une expertise opérationnelle sur les choix d'infrastructure, de workflows et d'organisation des équipes tech.
+I'm a **VCto & Architect**: I help companies define their product vision, design robust architectures, and put sustainable technical strategies in place.
+My role is to align product, engineering and business value, while bringing hands-on expertise on infrastructure choices, workflows and tech team organization.
 
-### **Lugha — SaaS d'apprentissage des langues**
+### **Lugha — Language learning SaaS**
 
-Je conçois **Lugha**, une plateforme complète dédiée au *language learning* :
-chat conversationnel, moteur d'analyse, flashcards, SRS, suivi de progression, achievements, prononciation, objectifs quotidiens et intégration IA.
-Lugha combine UX, linguistique et IA pour offrir une expérience d'apprentissage moderne et engageante.
+I'm building **Lugha**, an end-to-end platform dedicated to *language learning*:
+conversational chat, analysis engine, flashcards, SRS, progression tracking, achievements, pronunciation, daily goals and AI integration.
+Lugha combines UX, linguistics and AI to deliver a modern, engaging learning experience.
 
 ### **Kemeter — PaaS & Infrastructure**
 
-Je développe **Kemeter**, une plateforme PaaS pensée brique par brique et inspirée des cloud providers modernes :
-virtualisation, provisioning, orchestration applicative, reverse-proxy haute performance, gestion des logs (Vector/Quickwit), monitoring, automatisation des déploiements, add-ons et modèles d'applications.
-Kemeter est un projet d'architecture long terme, conçu pour être modulaire, performant et exploitable en production.
+I'm building **Kemeter**, a PaaS designed brick by brick, inspired by modern cloud providers:
+virtualization, provisioning, application orchestration, high-performance reverse-proxy, log management (Vector/Quickwit), monitoring, deployment automation, add-ons and application templates.
+Kemeter is a long-term architecture project — modular, performant, production-grade.
 
 ---
 
-### **Développement & Expertise technique**
+### **Engineering & Technical expertise**
 
-Je suis également **développeur confirmé** sur **PHP/Symfony, React et Rust**, avec une expérience complète des architectures web : API, front-end, back-end, CI/CD, conteneurisation Docker et optimisation.
-J'intègre l'IA au cœur de mes workflows techniques, notamment via la mise en place d'**agents de code** capables d'automatiser des tâches, structurer les pipelines et accélérer la production.
+I'm also a **seasoned developer** working with **PHP/Symfony, React and Rust**, with end-to-end experience in web architectures: APIs, front-end, back-end, CI/CD, Docker containerization and performance optimization.
+I bake AI into my technical workflows — notably by deploying **code agents** that automate tasks, structure pipelines and accelerate delivery.
 
 **[View my LinkedIn Profile →](https://www.linkedin.com/in/mlanawo-mbechezi-53b5ab44/)**
 
@@ -49,7 +52,23 @@ He has been working on various projects including Lugha (a next-generation langu
 
 </div>
 
-<button class="copy-button">Copy</button>
+<button class="copy-button" data-copy-bio>Copy bio</button>
+
+<script>
+document.querySelector('[data-copy-bio]')?.addEventListener('click', async (e) => {
+  const btn = e.currentTarget;
+  const text = document.querySelector('.bio-text')?.innerText.trim() ?? '';
+  try {
+    await navigator.clipboard.writeText(text);
+    const original = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1800);
+  } catch {
+    btn.textContent = 'Copy failed';
+  }
+});
+</script>
 
 </div>
 </div>
