@@ -1,9 +1,10 @@
 ---
 title: Projects
 permalink: projects.html
+intro: Some of the projects I've built or still contribute to. Got a question or a remark? <a href="mailto:nawo@alpacode.io" class="contact-link">Write me</a>.
+description: A selection of projects I've built or contributed to — Lugha, Ring, Sozune, Aplos and more.
 ---
 
-<p>Here is a small presentation of some of the projects I was or I am still part of. If you have any question or remarks on those projects, please <a href="mailto:nawo@alpacode.io" class="contact-link">contact me !</a></p>
 
 <div class="project-card">
     <h2>Lugha</h2>
