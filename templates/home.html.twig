@@ -1,0 +1,47 @@
+{% extends "layout.html.twig" %}
+
+{% block bodyClass %}home{% endblock %}
+
+{% block content %}
+    {% set i18n = {
+        en: { chip: 'VCto · Architect · Builder', tagline_name: 'Nawo', cta_primary: 'Say hello', cta_secondary: 'Read my resume →', section_kicker: 'Currently building', section_title: 'Two projects, one obsession.', lugha_tag: 'SaaS · Language learning', lugha_desc: 'A modern language learning platform — conversational AI, SRS, pronunciation, daily goals.', kemeter_tag: 'PaaS · Infrastructure', kemeter_desc: 'A PaaS built brick by brick. Orchestration, reverse-proxy, logs, monitoring.', hello: "Hi, I'm" },
+        fr: { chip: 'VCto · Architecte · Builder', tagline_name: 'Nawo', cta_primary: 'Dis-moi bonjour', cta_secondary: 'Voir mon CV →', section_kicker: 'En cours de construction', section_title: 'Deux projets, une seule obsession.', lugha_tag: 'SaaS · Apprentissage des langues', lugha_desc: "Une plateforme moderne d'apprentissage des langues — IA conversationnelle, SRS, prononciation, objectifs quotidiens.", kemeter_tag: 'PaaS · Infrastructure', kemeter_desc: 'Une PaaS construite brique par brique. Orchestration, reverse-proxy, logs, monitoring.', hello: "Salut, c'est" }
+    }[lang|default('en')] %}
+    <section class="hero">
+        <span class="chip">{{ i18n.chip }}</span>
+        <h1 class="hero-title">
+            {{ i18n.hello }} <span class="hero-accent">{{ i18n.tagline_name }}</span><span class="hero-dot">.</span>
+        </h1>
+        <p class="hero-tagline">{{ description }}</p>
+
+        <div class="hero-body">
+            <div class="content">{{ content|raw }}</div>
+        </div>
+
+        <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:nawo@alpacode.io">{{ i18n.cta_primary }}</a>
+            <a class="btn btn-ghost" href="{{ prefix }}/resume.html">{{ i18n.cta_secondary }}</a>
+        </div>
+    </section>
+
+    <section class="home-projects">
+        <div class="section-head">
+            <span class="section-kicker">{{ i18n.section_kicker }}</span>
+            <h2>{{ i18n.section_title }}</h2>
+        </div>
+        <div class="home-projects-grid">
+            <a class="home-project" href="https://lugha.app" target="_blank" rel="noopener">
+                <span class="home-project-tag">{{ i18n.lugha_tag }}</span>
+                <h3>Lugha</h3>
+                <p>{{ i18n.lugha_desc }}</p>
+                <span class="home-project-arrow">lugha.app →</span>
+            </a>
+            <a class="home-project" href="https://github.com/kemeter" target="_blank" rel="noopener">
+                <span class="home-project-tag">{{ i18n.kemeter_tag }}</span>
+                <h3>Kemeter</h3>
+                <p>{{ i18n.kemeter_desc }}</p>
+                <span class="home-project-arrow">github.com/kemeter →</span>
+            </a>
+        </div>
+    </section>
+{% endblock content %}

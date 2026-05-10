@@ -1,7 +1,12 @@
 {% extends "layout.html.twig" %}
 
+{% block bodyClass %}{{ body_class|default('') }}{% endblock %}
+
 {% block content %}
     <h1>{{ title }}</h1>
+    {% if intro is defined %}
+        <p class="page-intro">{{ intro|raw }}</p>
+    {% endif %}
 
     <div class="content">
         {{ content|raw }}
