@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: fr
 title: Bonjour monde
 ---
 Cela fait des années que je songe à mettre par écrit plusieurs de mes pensées

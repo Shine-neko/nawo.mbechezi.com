@@ -1,16 +1,37 @@
 {% extends "layout.html.twig" %}
 
+{% set i18n = {
+    en: { empty: 'No posts yet. Come back soon.' },
+    fr: { empty: 'Rien encore. Reviens bientôt.' }
+}[lang|default('en')] %}
+
 {% block content %}
     <h1>{{ title }}</h1>
+    {% if description is defined %}
+        <p class="page-intro">{{ description }}</p>
+    {% endif %}
 
-    <div class="posts-list">
-        {% for post in posts %}
-        <article class="blog-item">
-            <h2>
-                <a href="{{ post.permalink }}">{{ post.title }}</a>
-            </h2>
-            <span class="post-date">{{ post.created_at|date("F j, Y") }}</span>
-        </article>
-        {% endfor %}
-    </div>
+    {% if posts is empty %}
+        <p class="posts-empty">{{ i18n.empty }}</p>
+    {% else %}
+        <div class="posts-list">
+            {% set current_year = null %}
+            {% for post in posts %}
+                {% set year = post.created_at|date('Y') %}
+                {% if year != current_year %}
+                    {% if not loop.first %}</div>{% endif %}
+                    <div class="posts-year-group">
+                    <h2 class="posts-year">{{ year }}</h2>
+                    {% set current_year = year %}
+                {% endif %}
+                <article class="blog-item">
+                    <time class="post-date" datetime="{{ post.created_at|date('Y-m-d') }}">{{ post.created_at|date(lang == 'fr' ? 'd M' : 'M d') }}</time>
+                    <h3 class="post-title">
+                        <a href="{{ post.permalink }}">{{ post.title }}</a>
+                    </h3>
+                </article>
+                {% if loop.last %}</div>{% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endblock content %}
