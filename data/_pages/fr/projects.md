@@ -2,13 +2,13 @@
 title: Projets
 permalink: projects.html
 intro: Une petite sélection de projets que je porte ou auxquels je contribue. Une question, une remarque ? <a href="mailto:nawo@alpacode.io" class="contact-link">Écris-moi</a>.
-description: Une sélection de projets que j'ai construits ou auxquels je contribue — Lugha, Ring, Sozune, Aplos, et d'autres.
+description: Une sélection de projets que j'ai construits ou auxquels je contribue, dont Lugha, Ring, Sozune, Aplos, et d'autres.
 ---
 
 
 <div class="project-card">
     <h2>Lugha</h2>
-    <p>Une plateforme d'apprentissage des langues moderne — exercices interactifs, pratique intelligente, et progression sur la durée.</p>
+    <p>Une plateforme d'apprentissage des langues moderne : exercices interactifs, pratique intelligente, et progression sur la durée.</p>
     <div class="project-tags">
         <span class="tag">Apprentissage des langues</span>
         <span class="tag">Web App</span>

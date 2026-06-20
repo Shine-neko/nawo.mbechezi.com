@@ -2,8 +2,8 @@
 title: CV
 permalink: resume.html
 body_class: resume
-intro: VCto & Architecte — j'aide les entreprises à définir leur vision produit, concevoir des architectures durables, et structurer leurs équipes techniques.
-description: VCto & Architecte — vision produit, architectures durables, équipes techniques.
+intro: VCto & Architecte. J'aide les entreprises à définir leur vision produit, concevoir des architectures durables, et structurer leurs équipes techniques.
+description: VCto & Architecte. Vision produit, architectures durables, équipes techniques.
 ---
 
 <div class="resume-container" markdown="1">
@@ -14,13 +14,13 @@ description: VCto & Architecte — vision produit, architectures durables, équi
 Je suis **VCto & Architect** : j'accompagne les entreprises dans la définition de leur vision produit, la conception d'architectures robustes et la mise en place de stratégies techniques durables.
 Mon rôle consiste à aligner le produit, la technique et la valeur business, tout en apportant une expertise opérationnelle sur les choix d'infrastructure, de workflows et d'organisation des équipes tech.
 
-### **Lugha — SaaS d'apprentissage des langues**
+### **Lugha, SaaS d'apprentissage des langues**
 
 Je conçois **Lugha**, une plateforme complète dédiée au *language learning* :
 chat conversationnel, moteur d'analyse, flashcards, SRS, suivi de progression, achievements, prononciation, objectifs quotidiens et intégration IA.
 Lugha combine UX, linguistique et IA pour offrir une expérience d'apprentissage moderne et engageante.
 
-### **Kemeter — PaaS & Infrastructure**
+### **Kemeter, PaaS & Infrastructure**
 
 Je développe **Kemeter**, une plateforme PaaS pensée brique par brique et inspirée des cloud providers modernes :
 virtualisation, provisioning, orchestration applicative, reverse-proxy haute performance, gestion des logs (Vector/Quickwit), monitoring, automatisation des déploiements, add-ons et modèles d'applications.
