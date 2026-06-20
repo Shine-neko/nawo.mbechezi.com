@@ -1,8 +1,8 @@
 {% set lang = lang|default('en') %}
 {% set prefix = lang == 'en' ? '' : '/' ~ lang %}
 {% set t = {
-    en: { blog: 'Blog', resume: 'Resume', projects: 'Projects', talks: 'Talks', fragments: 'Fragments', home: 'Home', rss: 'RSS', switcher: 'Français' },
-    fr: { blog: 'Blog', resume: 'CV', projects: 'Projets', talks: 'Conférences', fragments: 'Fragments', home: 'Accueil', rss: 'RSS', switcher: 'English' }
+    en: { blog: 'Blog', resume: 'Resume', projects: 'Projects', talks: 'Talks', fragments: 'Fragments', home: 'Home', rss: 'RSS', switcher: 'Français', availableLong: 'Available for new projects' },
+    fr: { blog: 'Blog', resume: 'CV', projects: 'Projets', talks: 'Conférences', fragments: 'Fragments', home: 'Accueil', rss: 'RSS', switcher: 'English', availableLong: 'Disponible pour de nouvelles missions' }
 }[lang] %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
@@ -36,6 +36,9 @@
     <link href="/css/style.css" rel="stylesheet" />
 </head>
 <body class="{% block bodyClass %}{% endblock %}">
+    <a class="availability-banner" href="mailto:nawo@alpacode.io">
+        <span class="availability-dot"></span>{{ t.availableLong }}
+    </a>
     <header>
         <div class="header-container">
             <a class="logo" href="{{ prefix }}/" aria-label="{{ t.home }}">nawo</a>
