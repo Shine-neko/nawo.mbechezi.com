@@ -28,7 +28,7 @@ description: A selection of projects I've built or contributed to, including Lug
         <span class="tag">Docker</span>
     </div>
     <div class="project-footer">
-        <a href="https://github.com/kemeter/ring" target="_blank">View on GitHub</a>
+        <a href="https://ring.kemeter.io" target="_blank">View on GitHub</a>
     </div>
 </div>
 
@@ -41,7 +41,7 @@ description: A selection of projects I've built or contributed to, including Lug
         <span class="tag">Load Balancer</span>
     </div>
     <div class="project-footer">
-        <a href="https://github.com/kemeter/sozune" target="_blank">View on GitHub</a>
+        <a href="https://sozune.kemeter.io" target="_blank">View on GitHub</a>
     </div>
 </div>
 
@@ -54,6 +54,6 @@ description: A selection of projects I've built or contributed to, including Lug
         <span class="tag">Routing Framework</span>
     </div>
     <div class="project-footer">
-        <a href="https://github.com/alpac0de/aplos" target="_blank">View on GitHub</a>
+        <a href="https://aplos.alpacode.io" target="_blank">View on GitHub</a>
     </div>
 </div>
