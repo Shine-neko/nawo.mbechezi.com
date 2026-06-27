@@ -23,7 +23,7 @@ Lugha combines UX, linguistics and AI to deliver a modern, engaging learning exp
 ### **Kemeter, PaaS & Infrastructure**
 
 I'm building **Kemeter**, a PaaS designed brick by brick, inspired by modern cloud providers:
-virtualization, provisioning, application orchestration, high-performance reverse-proxy, log management (Vector/Quickwit), monitoring, deployment automation, add-ons and application templates.
+virtualization, provisioning, application orchestration, high-performance reverse-proxy, log management, monitoring, deployment automation, add-ons and application templates.
 Kemeter is a long-term architecture project modular, performant, production-grade.
 
 ---
@@ -34,21 +34,6 @@ I'm also a **seasoned developer** working with **PHP/Symfony, React and Rust**, 
 I bake AI into my technical workflows notably by deploying **code agents** that automate tasks, structure pipelines and accelerate delivery.
 
 **[View my LinkedIn Profile →](https://www.linkedin.com/in/mlanawo-mbechezi-53b5ab44/)**
-
-</div>
-<div class="resume-column" markdown="1">
-
-## Bio
-
-If you need a short biography, you can use this one:
-
-<div class="bio-text" markdown="1">
-
-Mlanawo Mbechezi is a VCto & Architect who helps companies define their product vision, design robust architectures, and implement sustainable technical strategies.
-
-He aligns product, technology, and business value while providing operational expertise on infrastructure choices, workflows, and tech team organization.
-
-He has been working on various projects including Lugha (a next-generation language learning SaaS) and Kemeter (a complete PaaS built brick by brick).
 
 </div>
 
